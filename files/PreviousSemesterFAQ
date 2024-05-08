@@ -1,0 +1,39 @@
+Assignment 4 – FAQ’s
+
+1. I can’t beat the unit tests for vectorized speed because my local machine is slow, should I be worried?
+
+Just make sure your vectorized speeds are faster than the naive implementation (e.g., for loops) by a significant margin, and your grades should be fine in gradescope. Also, note that you are allowed to use any numpy function necessary to achieve the necessary speed advantage.
+
+2. What is the difference between Gini Gain and Information Gain?
+
+Gini Gain computes the difference in Gini Impurity instead of computing the differences in entropy across splits: https://victorzhou.com/blog/gini-impurity/
+
+3. Am I allowed to split on the same attribute more than once?
+
+Yes - The metric/threshold you decide to split on may change at different parts of the tree
+
+4. For random forests, should I subsample my data points with or without replacement?
+
+You should sample with replacement as this keeps the total number of possible dataset combinations higher.
+
+5. For random forests, should I subsample my features with or without replacement?
+
+You should sample your features without replacement. Identical features will not help you split the data any better
+
+6. Do I need to submit my notebooks also?
+
+Nope, not at all. It’s just a convenient organization of unit tests. Visualization notebook is also for your convenience, you don’t have to submit any notebook.
+
+7. Vectorized Mask function is failing ?
+
+Please do not change the input data. Make a new array based on the values in the data array and the threshold and return that new array. 
+
+
+
+Notes:
+
+1. Make sure you account for divide by 0 cases in Gini and your performance metrics
+
+2. During real training, it is normally not desirable for training performance to be 100%, as that indicates overfitting
+
+3. If you are running out of time/memory, make sure your depth limit is not just set to infinity

@@ -1,0 +1,5 @@
+numpy==1.23.5
+graphviz
+jupyter>=1.0
+matplotlib>=3.6.2
+scikit-learn>=1.0
